@@ -12,7 +12,7 @@ public class TextDelimited {
     private boolean safe;
     private Object types[];
 
-    public TextDelimited(builder builder) {
+    private TextDelimited(builder builder) {
         this.fields=builder.fields;
         this.delimiter=builder.delimiter;
         this.quote=builder.quote;

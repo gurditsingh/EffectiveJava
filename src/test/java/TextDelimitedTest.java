@@ -14,6 +14,7 @@ public class TextDelimitedTest {
         Assert.assertEquals("|",textDelimited.getDelimiter());
     }
 
+    @Test
     public void itShouldGetSafeValue(){
         TextDelimited textDelimited =new TextDelimited.builder(new Fields("a","b"),"|").safe(true).build();
         Assert.assertTrue(textDelimited.isSafe());
