@@ -1,3 +1,5 @@
+package com.effective.code.item2;
+
 import com.effective.code.item2.Fields;
 import com.effective.code.item2.TextDelimited;
 import org.junit.Assert;
@@ -11,12 +13,12 @@ public class TextDelimitedTest {
     @Test
     public void itShouldGetDelimiter(){
         TextDelimited textDelimited =new TextDelimited.builder(new Fields("a","b"),"|").build();
-        Assert.assertEquals("|",textDelimited.getDelimiter());
+        Assert.assertEquals(",",textDelimited.getDelimiter());
     }
 
     @Test
     public void itShouldGetSafeValue(){
-        TextDelimited textDelimited =new TextDelimited.builder(new Fields("a","b"),"|").safe(true).build();
+        TextDelimited textDelimited =new TextDelimited.builder(new Fields("a","b"),"|").safe(true).header(true).build();
         Assert.assertTrue(textDelimited.isSafe());
     }
 }
